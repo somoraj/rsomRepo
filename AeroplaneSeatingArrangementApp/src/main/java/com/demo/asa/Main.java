@@ -31,7 +31,7 @@ public class Main {
                 if (seatRow > maxRow) {
                     maxRow = seatRow;
                 }
-                System.out.print("Input total row of SeatSection : " + i + " : ");
+                System.out.print("Input total column of SeatSection : " + i + " : ");
                 seatColumn = sc.nextInt();
                 if (Utilities.checkInputs(noOfSeatSection)) {
                     throw new AppServiceException("Number of column input value should be more than 0");
