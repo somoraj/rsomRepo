@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.demo.asa.service.providers.AppServiceProviderTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in com.demo.asa.service.providers.AppServiceProviderTest
