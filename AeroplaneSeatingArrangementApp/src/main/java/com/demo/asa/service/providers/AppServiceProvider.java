@@ -55,7 +55,7 @@ public class AppServiceProvider implements AppService {
         // fill aisle
         if(section.sectionType.equals(ConstantsUtil.SECTION_TYPE_FIRST)) {
             if(section.seats[row][section.seats[row].length-1] == null) {
-                if (passengers <= noOfPassengers) {
+                if (passengers < noOfPassengers) {
                     passengers++;
                     section.seats[row][section.seats[row].length - 1] = Integer.toString(passengers);
                 } else {
@@ -64,7 +64,7 @@ public class AppServiceProvider implements AppService {
             }
         } else if (section.sectionType.equals(ConstantsUtil.SECTION_TYPE_LAST)) {
             if(section.seats[row][0] == null) {
-                if (passengers <= noOfPassengers) {
+                if (passengers < noOfPassengers) {
                     passengers++;
                     section.seats[row][0] = Integer.toString(passengers);
                 } else {
@@ -73,7 +73,7 @@ public class AppServiceProvider implements AppService {
             }
         } else {
             if(section.seats[row][0] == null) {
-                if (passengers <= noOfPassengers) {
+                if (passengers < noOfPassengers) {
                     passengers++;
                     section.seats[row][0] = Integer.toString(passengers);
                 } else {
@@ -81,7 +81,7 @@ public class AppServiceProvider implements AppService {
                 }
             }
             if (section.seats[row][section.seats[row].length-1] == null) {
-                if (passengers <= noOfPassengers) {
+                if (passengers < noOfPassengers) {
                     passengers++;
                     section.seats[row][section.seats[row].length - 1] = Integer.toString(passengers);
                 } else {
@@ -96,7 +96,7 @@ public class AppServiceProvider implements AppService {
         // fill aisle
         if(section.sectionType.equals(ConstantsUtil.SECTION_TYPE_FIRST)) {
             if(section.seats[rowNum][0] == null) {
-                if (passengers <= noOfPassengers) {
+                if (passengers < noOfPassengers) {
                     passengers++;
                     section.seats[rowNum][0] = Integer.toString(passengers);
                 } else {
@@ -105,7 +105,7 @@ public class AppServiceProvider implements AppService {
             }
         } else if (section.sectionType.equals(ConstantsUtil.SECTION_TYPE_LAST)) {
             if(section.seats[rowNum][section.seats[rowNum].length - 1] == null) {
-                if (passengers <= noOfPassengers) {
+                if (passengers < noOfPassengers) {
                     passengers++;
                     section.seats[rowNum][section.seats[rowNum].length - 1] = Integer.toString(passengers);
                 } else {
@@ -121,7 +121,7 @@ public class AppServiceProvider implements AppService {
 
         for (int i = 1; i < section.seats[rowNum].length-1;i++) {
             if(section.seats[rowNum][i] ==  null) {
-                if(passengers <= noOfPassengers) {
+                if(passengers < noOfPassengers) {
                     passengers++;
                     section.seats[rowNum][i] = Integer.toString(passengers);
                 } else {
